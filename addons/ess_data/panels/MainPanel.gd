@@ -17,6 +17,16 @@ var _folder_entry_container : Node
 
 var _folders : Array = [
 	{
+		"folder": base_folder + "entity_resources/",
+		"type": "EntityResourceData",
+		"name": "Entity Resources"
+	},
+	{
+		"folder": base_folder + "entity_skills/",
+		"type": "EntitySkillData",
+		"name": "Entity Skills"
+	},
+	{
 		"folder": base_folder + "spells/",
 		"type": "Spell",
 		"name": "Spells"
