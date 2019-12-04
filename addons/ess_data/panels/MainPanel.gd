@@ -19,12 +19,13 @@ var _folders : Array = [
 	{
 		"folder": base_folder + "entity_resources/",
 		"type": "EntityResourceData",
-		"name": "Entity Resources"
+		"name": "Resources",
+		"header": "Entities"
 	},
 	{
 		"folder": base_folder + "entity_skills/",
 		"type": "EntitySkillData",
-		"name": "Entity Skills"
+		"name": "Skills"
 	},
 	{
 		"folder": base_folder + "spells/",
@@ -54,22 +55,22 @@ var _folders : Array = [
 	{
 		"folder": base_folder + "item_visuals/",
 		"type": "ItemVisual",
-		"name": "ItemVisuals"
+		"name": "Item Visuals"
 	},
 	{
 		"folder": base_folder + "character_models/",
 		"type": "MeshDataResource",
-		"name": "Character Models"
+		"name": "Models"
 	},
 	{
 		"folder": base_folder + "character_specs/",
 		"type": "CharacterSpec",
-		"name": "Character Specs"
+		"name": "Specs"
 	},
 	{
 		"folder": base_folder + "character_textures/",
 		"type": "Texture",
-		"name": "Character Textures"
+		"name": "Textures"
 	},
 	{
 		"folder": base_folder + "effect_data/",
@@ -89,7 +90,7 @@ var _folders : Array = [
 	{
 		"folder": base_folder + "entity_classes/",
 		"type": "EntityClassData",
-		"name": "Entity Classes"
+		"name": "Classes"
 	},
 	{
 		"folder": base_folder + "ai/",
@@ -99,7 +100,8 @@ var _folders : Array = [
 	{
 		"folder": base_folder + "planets/",
 		"type": "PropDataEntry",
-		"name": "Planets"
+		"name": "Planets",
+		"header": "World"
 	},
 	{
 		"folder": base_folder + "biomes/",
@@ -129,7 +131,8 @@ var _folders : Array = [
 	{
 		"folder": base_folder + "ships/",
 		"type": "PropData",
-		"name": "Ships"
+		"name": "Ships",
+		"header": "Ships"
 	},
 	{
 		"folder": base_folder + "ship_parts/",
@@ -139,7 +142,8 @@ var _folders : Array = [
 	{
 		"folder": base_folder + "props/",
 		"type": "PropData",
-		"name": "Props"
+		"name": "Props",
+		"header": "Props"
 	},
 	{
 		"folder": base_folder + "prop_models/",
@@ -149,47 +153,50 @@ var _folders : Array = [
 	{
 		"folder": base_folder + "spell_effects/enchanter/",
 		"type": "Spatial",
-		"name": "Spell Effects -> Enchanter"
+		"name": "Enchanter",
+		"header": "Spell Effects"
 	},
 	{
 		"folder": base_folder + "spell_effects/nature/",
 		"type": "Spatial",
-		"name": "Spell Effects -> Nature"
+		"name": "Nature"
 	},
 	{
 		"folder": base_folder + "spell_effects/textures/",
 		"type": "Texture",
-		"name": "Spell Effects -> Textures"
+		"name": "Textures"
 	},
 	{
 		"folder": base_folder + "icons/",
 		"type": "Texture",
-		"name": "Icons"
+		"name": "Icons",
+		"header": "Icons"
 	},
 	{
 		"folder": base_folder + "icons/items/",
 		"type": "Texture",
-		"name": "Icons -> Items"
+		"name": "Items"
 	},
 	{
 		"folder": base_folder + "icons/naturalist/",
 		"type": "Texture",
-		"name": "Icons -> Naturalist"
+		"name": "Naturalist"
 	},
 	{
 		"folder": base_folder + "environments/",
 		"type": "Environment",
-		"name": "Environments"
+		"name": "Environments",
+		"header": "Materials"
 	},
 	{
 		"folder": base_folder + "materials/",
 		"type": "Material",
-		"name": "Materials"
+		"name": "Materials",
 	},
 	{
 		"folder": base_folder + "models/",
 		"type": "CharacterSkeleton",
-		"name": "CharacterModels"
+		"name": "Character Models"
 	},
 	{
 		"folder": base_folder + "fonts/",
@@ -204,7 +211,8 @@ var _folders : Array = [
 	{
 		"folder": base_folder + "voxel_libraries/",
 		"type": "VoxelmanLibrary",
-		"name": "Voxel Libraries"
+		"name": "Voxel Libraries",
+		"header": "Voxel"
 	},
 	{
 		"folder": base_folder + "voxel_surfaces/",
@@ -219,12 +227,14 @@ var _folders : Array = [
 	{
 		"folder": base_folder + "xp/",
 		"type": "XPData",
-		"name": "XP Data"
+		"name": "XP",
+		"header": "XP"
 	},
 	{
 		"folder": base_folder + "cursors/",
 		"type": "Texture",
-		"name": "Cursors"
+		"name": "Cursors",
+		"header": "Cursors"
 	},
 ]
 
@@ -243,6 +253,14 @@ func _ready():
 	
 	var index = 0
 	for f in _folders:
+		if f.has("header"):
+			var h : Label = Label.new()
+			
+			_folder_entry_container.add_child(h)
+			h.owner = _folder_entry_container
+			
+			h.text = f["header"]
+		
 		var fe : Node = folder_entry_button_scene.instance()
 		
 		_folder_entry_container.add_child(fe)
