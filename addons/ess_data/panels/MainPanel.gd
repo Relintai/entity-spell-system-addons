@@ -28,56 +28,6 @@ var _folders : Array = [
 		"name": "Skills"
 	},
 	{
-		"folder": base_folder + "spells/",
-		"type": "Spell",
-		"name": "Spells"
-	},
-	{
-		"folder": base_folder + "auras/",
-		"type": "Aura",
-		"name": "Auras"
-	},
-	{
-		"folder": base_folder + "aura_groups/",
-		"type": "AuraGroup",
-		"name": "Aura Groups"
-	},
-	{
-		"folder": base_folder + "item_templates/",
-		"type": "ItemTemplate",
-		"name": "Items"
-	},
-	{
-		"folder": base_folder + "crafting/",
-		"type": "CraftRecipe",
-		"name": "Craft Recipes"
-	},
-	{
-		"folder": base_folder + "item_visuals/",
-		"type": "ItemVisual",
-		"name": "Item Visuals"
-	},
-	{
-		"folder": base_folder + "character_models/",
-		"type": "MeshDataResource",
-		"name": "Models"
-	},
-	{
-		"folder": base_folder + "character_specs/",
-		"type": "CharacterSpec",
-		"name": "Specs"
-	},
-	{
-		"folder": base_folder + "character_textures/",
-		"type": "Texture",
-		"name": "Textures"
-	},
-	{
-		"folder": base_folder + "effect_data/",
-		"type": "SpellEffectVisual",
-		"name": "Effect Datas"
-	},
-	{
 		"folder": base_folder + "entities/",
 		"type": "EntityData",
 		"name": "Entities"
@@ -96,6 +46,64 @@ var _folders : Array = [
 		"folder": base_folder + "ai/",
 		"type": "AIAction",
 		"name": "AI"
+	},
+	{
+		"folder": base_folder + "character_models/",
+		"type": "MeshDataResource",
+		"name": "Models",
+		"header": "Models"
+	},
+	{
+		"folder": base_folder + "character_textures/",
+		"type": "Texture",
+		"name": "Textures"
+	},
+	{
+		"folder": base_folder + "spells/",
+		"type": "Spell",
+		"name": "Spells",
+		"header": "Spells"
+	},
+	{
+		"folder": base_folder + "auras/",
+		"type": "Aura",
+		"name": "Auras"
+	},
+	{
+		"folder": base_folder + "aura_groups/",
+		"type": "AuraGroup",
+		"name": "Aura Groups"
+	},
+	{
+		"folder": base_folder + "character_specs/",
+		"type": "CharacterSpec",
+		"name": "Specs"
+	},
+	{
+		"folder": base_folder + "effect_data/",
+		"type": "SpellEffectVisual",
+		"name": "Effect Datas"
+	},
+	{
+		"folder": base_folder + "world_spells/",
+		"type": "WorldSpellData",
+		"name": "World Spells"
+	},
+	{
+		"folder": base_folder + "item_templates/",
+		"type": "ItemTemplate",
+		"name": "Items",
+		"header": "Items"
+	},
+	{
+		"folder": base_folder + "crafting/",
+		"type": "CraftRecipe",
+		"name": "Craft Recipes"
+	},
+	{
+		"folder": base_folder + "item_visuals/",
+		"type": "ItemVisual",
+		"name": "Item Visuals"
 	},
 	{
 		"folder": base_folder + "planets/",
